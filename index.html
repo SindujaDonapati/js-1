@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mar 18 Task</title>
+</head>
+<body>
+    <!-- <input type="username" id="username" placeholder="Enter name"> -->
+    
+    <script> 
+
+    // Basic level
+
+    var str= "hello world"
+        var str= prompt("enter").toUpperCase()
+        console.log(str)
+
+        var str= "hello world"
+        var str= prompt("enter").toLowerCase()
+        console.log(str)
+
+        var str = "hello"
+        console.log(str.split("").reverse().join())
+
+
+        var str= "hello world"
+        console.log(str.match(/[aeiou]/gi))
+
+
+    // advanced
+    // Username Validation
+
+
+        function validateUsername(username){
+            if(username.length >=5 && username.length <=5){
+                console.log("username is valid.");
+
+        }else {
+            console.log("username is invalid.") ;
+        }
+        
+        }
+        let username= prompt("enter a username:");
+        validateUsername(username);
+
+    // Email Formatter
+
+
+    function formatEmail(first,last){
+        let email = first.toLowerCase()+"."+last.toLowerCase()+"gmail.com";
+        console.log("FormatedEmail:",email);
+    }
+    let first = prompt("Enter a frist name:");
+    let last = prompt("Enter a second name:");
+    formatEmail(first.trim(),last.trim());
+
+
+    //  WORD COUNTER
+
+    function count(sentence){
+        let words = sentence.trim().split(/\s+/);
+        console.log("Word Count:",words.length);
+    }
+    let sentence = prompt("Enter a sentence:");
+    count(sentence);
+
+
+      // PALINDROME
+
+      function isPalindrome(str){
+        let cleanedStr = str.toLowerCase().replace(/\s+/g,'');
+        let reversedStr = cleanedStr.split('').reverse().join('');
+        if(cleanedStr===reversedStr)    {
+            console.log("It is a Palindrome.");
+        }  else{
+            console.log("It is not a Palindrome.");
+        }
+                                          
+    }
+    let inputString = prompt("Enter a string:");
+    isPalindrome(inputString);
+
+    </script>
+</body>
+</html>
